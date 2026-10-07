@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="theme-color" content="#FAEDEA" />
+  <meta name="description" content="Destiny Fit Club Pro — Welcome and member guide." />
+  <title>Destiny Fit Club Pro | Welcome</title>
+
+  <style>
+    :root{
+      --blush:#FAEDEA;
+      --rose:#DD7E92;
+      --deep-rose:#C4607A;
+      --gold:#C7A24E;
+      --charcoal:#4A4A4A;
+      --ink:#2D292A;
+      --muted:#756D70;
+      --line:#EFDDE0;
+      --white:#FFFFFF;
+      --soft:#FFF9F8;
+      --shadow:0 24px 60px rgba(88,48,58,.10);
+      --shadow-soft:0 12px 30px rgba(88,48,58,.07);
+      --radius-lg:28px;
+      --radius-md:20px;
+      --radius-sm:14px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at 8% 2%, rgba(221,126,146,.12), transparent 30%),
+        radial-gradient(circle at 92% 10%, rgba(199,162,78,.08), transparent 24%),
+        linear-gradient(180deg,#fff 0%,#fff 72%,#fff8f7 100%);
+      color:var(--ink);
+      font-family:Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    .page{
+      width:min(1160px, calc(100% - 32px));
+      margin:0 auto;
+      padding:34px 0 70px;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:520px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:60px 28px;
+      background:rgba(255,255,255,.94);
+      border:1px solid rgba(196,96,122,.15);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      border-radius:50%;
+      left:-150px;
+      top:-150px;
+      background:rgba(221,126,146,.10);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      border-radius:50%;
+      right:-130px;
+      bottom:-160px;
+      background:rgba(199,162,78,.08);
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:1;
+      width:min(820px,100%);
+    }
+
+    .logo{
+      display:block;
+      width:min(520px,88%);
+      height:auto;
+      margin:0 auto 18px;
+    }
+
+    .kicker{
+      margin:0 0 14px;
+      color:var(--gold);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3{
+      font-family:Georgia, "Times New Roman", serif;
+      font-weight:500;
+      color:var(--charcoal);
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(38px,7vw,72px);
+      line-height:1.02;
+      letter-spacing:-.03em;
+    }
+
+    .hero-copy{
+      width:min(700px,100%);
+      margin:20px auto 0;
+      color:var(--muted);
+      font-size:clamp(17px,2vw,21px);
+      line-height:1.7;
+    }
+
+    .rule{
+      width:94px;
+      height:2px;
+      margin:28px auto;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    }
+
+    .hero-note{
+      margin:0 auto;
+      width:min(700px,100%);
+      font-size:15px;
+      color:#6B6265;
+      line-height:1.7;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:22px;
+      margin-top:24px;
+    }
+
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-soft);
+      padding:34px;
+    }
+
+    .section-label{
+      display:block;
+      margin-bottom:10px;
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .panel h2,
+    .content-section h2{
+      margin:0 0 14px;
+      font-size:clamp(27px,4vw,42px);
+      line-height:1.08;
+    }
+
+    .panel p,
+    .content-section p{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.75;
+      margin:0 0 15px;
+    }
+
+    .premium-list{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px 20px;
+      padding:0;
+      margin:18px 0 0;
+      list-style:none;
+    }
+
+    .premium-list li{
+      position:relative;
+      padding-left:18px;
+      color:#5D5558;
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .premium-list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.65em;
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--rose);
+    }
+
+    .quote-card{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-height:100%;
+      background:linear-gradient(145deg,var(--deep-rose),var(--rose));
+      color:#fff;
+      border:none;
+    }
+
+    .quote-card h2,
+    .quote-card p{
+      color:#fff;
+    }
+
+    .quote-card h2{
+      font-size:clamp(30px,4vw,46px);
+    }
+
+    .quote-card p{
+      opacity:.9;
+    }
+
+    .quote-card .rule{
+      margin:22px 0;
+      background:linear-gradient(90deg,rgba(255,255,255,.15),rgba(255,255,255,.75),rgba(255,255,255,.15));
+    }
+
+    .content-section{
+      margin-top:24px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-soft);
+      padding:40px;
+    }
+
+    .lead{
+      font-size:17px !important;
+      color:#60585B !important;
+    }
+
+    .statement{
+      margin:24px 0 0;
+      padding:26px 28px;
+      border:1px solid rgba(199,162,78,.35);
+      background:linear-gradient(180deg,#FFFEFC,#FFF9F2);
+      border-radius:18px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:24px;
+      line-height:1.35;
+      color:#5B4F42;
+    }
+
+    .supporting{
+      display:block;
+      margin-top:9px;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:13px;
+      line-height:1.55;
+      color:#8A7B6A;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .step{
+      display:grid;
+      grid-template-columns:44px 1fr;
+      gap:14px;
+      align-items:start;
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:var(--soft);
+    }
+
+    .step-no{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#fff;
+      border:1px solid rgba(196,96,122,.20);
+      color:var(--deep-rose);
+      font-weight:800;
+      font-size:13px;
+    }
+
+    .step h3{
+      margin:2px 0 6px;
+      font-size:19px;
+    }
+
+    .step p{margin:0;font-size:14px}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .cards.two{grid-template-columns:repeat(2,1fr)}
+    .cards.five{grid-template-columns:repeat(5,1fr)}
+
+    .card{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,#fff,#fffafa);
+      border-radius:18px;
+      padding:22px;
+      min-height:100%;
+    }
+
+    .card .num{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:20px;
+      line-height:1.2;
+    }
+
+    .card p{
+      margin:0;
+      font-size:14px;
+    }
+
+    .mini-list{
+      margin:15px 0 0;
+      padding:0;
+      list-style:none;
+    }
+
+    .mini-list li{
+      position:relative;
+      padding:8px 0 8px 18px;
+      border-top:1px solid #F4E8EA;
+      color:#625A5C;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .mini-list li:first-child{border-top:none}
+    .mini-list li::before{
+      content:"•";
+      position:absolute;
+      left:2px;
+      color:var(--rose);
+      font-weight:800;
+    }
+
+    .choice-line{
+      margin-top:22px;
+      padding:18px 20px;
+      background:#FFF8F7;
+      border-left:3px solid var(--rose);
+      border-radius:10px;
+      color:#554D50;
+      font-size:15px;
+    }
+
+    .schedule{
+      margin-top:24px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:18px;
+    }
+
+    .schedule-row{
+      display:grid;
+      grid-template-columns:150px 1fr;
+      border-top:1px solid var(--line);
+    }
+
+    .schedule-row:first-child{border-top:none}
+
+    .schedule-day,
+    .schedule-focus{
+      padding:16px 18px;
+      font-size:14px;
+    }
+
+    .schedule-day{
+      background:#FFF8F7;
+      color:var(--deep-rose);
+      font-weight:800;
+    }
+
+    .schedule-focus{
+      color:#5E5659;
+    }
+
+    .rule-card{
+      margin-top:24px;
+      padding:28px;
+      text-align:center;
+      border-radius:20px;
+      color:#fff;
+      background:linear-gradient(135deg,#503E43,#2F292B);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .rule-card .small{
+      color:#D7C6CA;
+      font-size:11px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+
+    .rule-card .big{
+      display:block;
+      margin-top:10px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(27px,4vw,42px);
+      line-height:1.18;
+    }
+
+    .category-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .category{
+      padding:16px 12px;
+      border-radius:14px;
+      text-align:center;
+      background:#FFF8F7;
+      border:1px solid var(--line);
+      color:#665D60;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .progress-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .progress-item{
+      padding:20px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    .progress-item h3{
+      margin:0 0 7px;
+      font-size:18px;
+    }
+
+    .progress-item p{
+      margin:0;
+      font-size:13px;
+    }
+
+    .support-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .footer{
+      margin-top:24px;
+      padding:34px 24px;
+      text-align:center;
+      color:#7B7275;
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    .footer-logo{
+      width:min(300px,70%);
+      display:block;
+      margin:0 auto 16px;
+      opacity:.92;
+    }
+
+    strong{color:#4D4548}
+    .quote-card strong,
+    .rule-card strong{color:#fff}
+
+    @media (max-width: 980px){
+      .intro-grid{grid-template-columns:1fr}
+      .cards,.cards.five{grid-template-columns:repeat(2,1fr)}
+      .progress-grid{grid-template-columns:repeat(2,1fr)}
+      .support-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width: 720px){
+      .page{width:min(100% - 18px,1160px);padding:9px 0 34px}
+      .hero{min-height:auto;padding:38px 18px;border-radius:22px}
+      .hero-copy{font-size:16px}
+      .panel,.content-section{padding:26px 20px;border-radius:20px}
+      .premium-list{grid-template-columns:1fr}
+      .steps,.cards,.cards.two,.cards.five,.progress-grid{grid-template-columns:1fr}
+      .category-grid{grid-template-columns:repeat(2,1fr)}
+      .schedule-row{grid-template-columns:112px 1fr}
+      .schedule-day,.schedule-focus{padding:14px 12px}
+      .statement{font-size:21px}
+    }
+
+    @media (max-width: 420px){
+      .category-grid{grid-template-columns:1fr}
+      .schedule-row{grid-template-columns:1fr}
+      .schedule-day{padding-bottom:8px}
+      .schedule-focus{padding-top:0;background:#FFF8F7}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <section class="hero">
+      <div class="hero-inner">
+        <img class="logo" src="destiny-fitness-logo.png" alt="Destiny Fitness logo" />
+        <p class="kicker">Destiny Fit Club Pro</p>
+        <h1>Your complete Destiny Fitness experience starts here.</h1>
+        <div class="rule"></div>
+        <p class="hero-copy">
+          Welcome to <strong>Destiny Fit Club Pro</strong> 💗
+          You’ve officially unlocked the full Destiny Fitness membership.
+        </p>
+        <p class="hero-note">
+          Pro is designed to take the guesswork out of fitness by giving you an organized system for your workouts,
+          nutrition education, progress, accountability, and ongoing training.
+        </p>
+      </div>
+    </section>
+
+    <section class="intro-grid">
+      <div class="panel">
+        <span class="section-label">What You’ve Unlocked</span>
+        <h2>Everything you need to train with direction.</h2>
+        <p>
+          Inside Pro, you’ll have access to a complete training ecosystem built to help you stay organized,
+          consistent, and confident.
+        </p>
+
+        <ul class="premium-list">
+          <li>Weekly training plans</li>
+          <li>Complete workout library</li>
+          <li>Home and gym training options</li>
+          <li>Glute-focused programming</li>
+          <li>Nutrition Hub</li>
+          <li>Recipes and meal-prep resources</li>
+          <li>Transformation challenges</li>
+          <li>Pro community</li>
+          <li>Ask Destiny</li>
+          <li>Monthly Q&amp;A</li>
+          <li>New workouts and resources over time</li>
+        </ul>
+      </div>
+
+      <div class="panel quote-card">
+        <span class="section-label" style="color:#FFE7EC;">Your First Rule</span>
+        <h2>You do not need to use everything at once.</h2>
+        <div class="rule"></div>
+        <p>
+          Start with this course, choose your goal and training path, then follow your weekly plan.
+          Your workout library and other resources are there to support your plan, not replace it.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">01 · How Pro Works</span>
+      <h2>Free teaches the fundamentals. Pro gives you the ongoing system.</h2>
+      <p class="lead">
+        Instead of wondering what to train today, what to do next week, or how to keep progressing,
+        Pro gives you a structured path to follow.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num">Home Base</div>
+          <h3>Your Weekly Plan</h3>
+          <p>Your main training road-map and the first place to check when planning your week.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Support</div>
+          <h3>Workout Library</h3>
+          <p>Use it for exercise demonstrations, substitutions, extra workouts, and training resources.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Fuel</div>
+          <h3>Nutrition Hub</h3>
+          <p>Build practical nutrition habits through education, recipes, meal prep, and grocery resources.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Accountability</div>
+          <h3>Transformation Challenges</h3>
+          <p>Use structured challenges to strengthen consistency, habits, and momentum.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Guidance</div>
+          <h3>Ask Destiny + Q&amp;A</h3>
+          <p>Get answers to fitness questions without needing private one-on-one coaching.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Community</div>
+          <h3>Pro Community</h3>
+          <p>Connect with other members, share progress, celebrate wins, and stay accountable.</p>
+        </article>
+      </div>
+
+      <div class="statement">
+        Think of your weekly training plan as your home base.
+        <span class="supporting">Everything else inside Pro is there to support it.</span>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">02 · Your Simple Pro System</span>
+      <h2>Use Pro in this order.</h2>
+      <p class="lead">
+        Follow this sequence instead of trying to complete every workout, recipe, challenge, and resource at once.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-no">01</div>
+          <div>
+            <h3>Choose your goal</h3>
+            <p>Decide what matters most right now.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-no">02</div>
+          <div>
+            <h3>Choose your training environment</h3>
+            <p>Home, gym, or a combination of both.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-no">03</div>
+          <div>
+            <h3>Follow your weekly plan</h3>
+            <p>This should guide most of your workouts.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-no">04</div>
+          <div>
+            <h3>Use the Workout Library</h3>
+            <p>Review demonstrations, substitutions, and additional training resources when needed.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-no">05</div>
+          <div>
+            <h3>Use the Nutrition Hub</h3>
+            <p>Build eating habits that support your training and goals.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-no">06</div>
+          <div>
+            <h3>Track your progress</h3>
+            <p>Watch your strength, consistency, measurements, habits, and performance change over time.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-no">07</div>
+          <div>
+            <h3>Use the community + Ask Destiny</h3>
+            <p>Do not stay stuck when you have questions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="statement">
+        Follow the plan, learn as you go, stay consistent.
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">03 · Choose Your Goal</span>
+      <h2>Choose the main result you want your training to focus on.</h2>
+      <p class="lead">
+        Your training becomes much easier to organize when you know what you’re working toward.
+        Choose <strong>one primary goal</strong> for now.
+      </p>
+
+      <div class="cards five">
+        <article class="card">
+          <div class="num">Goal 01</div>
+          <h3>Build Glutes</h3>
+          <p>Focus on resistance training, lower-body development, progressive overload, adequate nutrition, and recovery.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Goal 02</div>
+          <h3>Lose Body Fat</h3>
+          <p>Focus on consistent strength training, daily movement, sustainable nutrition, and appropriate cardio.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Goal 03</div>
+          <h3>Get Stronger</h3>
+          <p>Focus on resistance training, proper technique, progressive overload, and tracking your lifts.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Goal 04</div>
+          <h3>Body Recomposition</h3>
+          <p>Focus on building or maintaining muscle while gradually reducing body fat through training, protein, recovery, and patience.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Goal 05</div>
+          <h3>General Fitness</h3>
+          <p>Focus on becoming more active, stronger, healthier, and more consistent.</p>
+        </article>
+      </div>
+
+      <div class="choice-line"><strong>Your primary goal:</strong> ____________________</div>
+      <p style="margin-top:14px;">You can change your focus later. You do not have to chase every goal at once.</p>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">04 · Choose Your Environment</span>
+      <h2>Train where you’re most likely to stay consistent.</h2>
+      <p class="lead">
+        You can make meaningful progress at home or in a gym. Your environment does not determine whether you succeed.
+        <strong>Consistency does.</strong>
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="num">Option 01</div>
+          <h3>Home</h3>
+          <p>Best if you value convenience or are still building gym confidence.</p>
+          <ul class="mini-list">
+            <li>Dumbbells</li>
+            <li>Resistance bands</li>
+            <li>Exercise mat</li>
+            <li>Sturdy bench or elevated surface</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="num">Option 02</div>
+          <h3>Gym</h3>
+          <p>Best if you want access to heavier resistance, machines, cables, barbells, and a wider exercise selection.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Option 03</div>
+          <h3>Both</h3>
+          <p>Train at the gym when possible and use home workouts when life gets busy.</p>
+        </article>
+      </div>
+
+      <div class="choice-line"><strong>My training environment:</strong> Home / Gym / Both</div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">05 · Choose Your Track</span>
+      <h2>Pick the training path that fits you best.</h2>
+      <p class="lead">
+        Inside Pro, your training plans may be organized into different tracks. Choose one and give yourself enough time to progress.
+      </p>
+
+      <div class="cards two">
+        <article class="card">
+          <div class="num">Track 01</div>
+          <h3>Beginner Track</h3>
+          <p>Best for members who are newer to structured strength training or want a simpler schedule.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Track 02</div>
+          <h3>Gym Track</h3>
+          <p>Best for members with regular access to gym equipment.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Track 03</div>
+          <h3>Home Track</h3>
+          <p>Best for members primarily training with dumbbells, bands, and bodyweight.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Track 04</div>
+          <h3>Glute Focus</h3>
+          <p>Best for members whose main priority is glute and lower-body development.</p>
+        </article>
+      </div>
+
+      <div class="choice-line"><strong>My starting track:</strong> ____________________</div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">06 · Your Weekly Training Plan</span>
+      <h2>This should be the first place you check when planning your workouts.</h2>
+      <p class="lead">
+        Instead of randomly choosing workouts from the library, follow the schedule for your selected track.
+      </p>
+
+      <div class="schedule">
+        <div class="schedule-row">
+          <div class="schedule-day">Monday</div>
+          <div class="schedule-focus">Lower Body / Glutes</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-day">Tuesday</div>
+          <div class="schedule-focus">Upper Body</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-day">Wednesday</div>
+          <div class="schedule-focus">Recovery or Movement</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-day">Thursday</div>
+          <div class="schedule-focus">Lower Body</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-day">Friday</div>
+          <div class="schedule-focus">Full Body or Core</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-day">Weekend</div>
+          <div class="schedule-focus">Recovery, movement, or optional training</div>
+        </div>
+      </div>
+
+      <p style="margin-top:18px;">Your exact schedule may vary depending on the track.</p>
+
+      <div class="cards two">
+        <article class="card">
+          <div class="num">If You Miss a Day</div>
+          <h3>Do not restart your entire week.</h3>
+          <p>Continue with the next planned workout when you can. Move workouts around if needed while still allowing adequate recovery.</p>
+        </article>
+
+        <article class="card">
+          <div class="num">Schedule Flexibility</div>
+          <h3>You do not have to train Monday through Friday.</h3>
+          <p>The days are a structure, not a prison. Tuesday, Wednesday, Friday, and Saturday can work just as well if that better fits your life.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">07 · Workout Library</span>
+      <h2>Use the library as a resource — not as a random workout generator.</h2>
+      <p class="lead">
+        More workouts do not automatically mean better results. Structured repetition makes it easier to track improvement
+        and progressively overload your training.
+      </p>
+
+      <div class="category-grid">
+        <div class="category">Glutes</div>
+        <div class="category">Lower Body</div>
+        <div class="category">Upper Body</div>
+        <div class="category">Core</div>
+        <div class="category">Full Body</div>
+        <div class="category">Cardio</div>
+        <div class="category">At Home</div>
+        <div class="category">Mobility &amp; Recovery</div>
+      </div>
+
+      <div class="rule-card">
+        <span class="small">Your Rule</span>
+        <span class="big">Weekly Plan first. Workout Library second.</span>
+      </div>
+
+      <div class="cards two">
+        <article class="card">
+          <div class="num">Use It To</div>
+          <ul class="mini-list">
+            <li>Review an exercise</li>
+            <li>Find an alternative</li>
+            <li>Add an optional workout</li>
+            <li>Train while traveling</li>
+            <li>Complete a shorter session</li>
+            <li>Explore another type of training</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="num">Avoid</div>
+          <h3>Completely random workouts every day.</h3>
+          <p>Following a repeatable plan gives you a clearer way to judge progress, improve technique, and build strength over time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">08 · Nutrition Hub</span>
+      <h2>Use nutrition to support your training without chasing perfection.</h2>
+      <p class="lead">
+        The Nutrition Hub is designed to make eating for your goals more practical.
+      </p>
+
+      <div class="category-grid">
+        <div class="category">Nutrition Education</div>
+        <div class="category">High-Protein Recipes</div>
+        <div class="category">Meal Prep</div>
+        <div class="category">Breakfasts</div>
+        <div class="category">Lunches</div>
+        <div class="category">Dinners</div>
+        <div class="category">Snacks</div>
+        <div class="category">Grocery Guides</div>
+        <div class="category">Fat-Loss Education</div>
+        <div class="category">Muscle-Building Nutrition</div>
+        <div class="category">Body Recomposition</div>
+        <div class="category">Pre/Post-Workout Nutrition</div>
+      </div>
+
+      <div class="cards two">
+        <article class="card">
+          <div class="num">Start Here</div>
+          <ul class="mini-list">
+            <li>Include protein regularly</li>
+            <li>Eat fruits and vegetables</li>
+            <li>Stay hydrated</li>
+            <li>Choose portions that support your goal</li>
+            <li>Build habits you can realistically maintain</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="num">Important Note</div>
+          <h3>Education, not individualized treatment.</h3>
+          <p>The Nutrition Hub provides general education and resources. It is not individualized medical nutrition treatment.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">09 · Track Your Progress</span>
+      <h2>Measure more than the number on the scale.</h2>
+      <p class="lead">
+        You cannot improve what you never pay attention to. Depending on your goal, consider tracking the areas below.
+      </p>
+
+      <div class="progress-grid">
+        <article class="progress-item">
+          <h3>Strength</h3>
+          <p>Record weights and repetitions on your main exercises.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>Workout Consistency</h3>
+          <p>Notice how many planned sessions you actually complete.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>Progress Photos</h3>
+          <p>Optional front, side, and back photos under similar conditions.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>Measurements</h3>
+          <p>You may track areas such as your waist and hips.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>Body Weight</h3>
+          <p>Optional. Focus on trends instead of individual day-to-day changes.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>Daily Movement</h3>
+          <p>Track steps or other general activity when useful.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>Habits</h3>
+          <p>Sleep, hydration, meals, and recovery all matter.</p>
+        </article>
+
+        <article class="progress-item">
+          <h3>How You Feel</h3>
+          <p>Energy, confidence, gym comfort, and performance matter too.</p>
+        </article>
+      </div>
+
+      <div class="statement">
+        Review your progress approximately every 4 weeks.
+        <span class="supporting">Avoid judging your body based on a single day.</span>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-label">10 · Support Inside Pro</span>
+      <h2>Know where to get support when you need it.</h2>
+      <p class="lead">
+        Pro is more than a workout library. Use the community, questions, and group resources to stay supported.
+      </p>
+
+      <div class="support-grid">
+        <article class="card">
+          <div class="num">Pro Community</div>
+          <h3>Stay connected.</h3>
+          <ul class="mini-list">
+            <li>Ask general questions</li>
+            <li>Share workouts</li>
+            <li>Stay accountable</li>
+            <li>Celebrate progress</li>
+            <li>Connect with other members</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="num">Ask Destiny</div>
+          <h3>Get clarification when you need it.</h3>
+          <ul class="mini-list">
+            <li>How do I know when to increase weight?</li>
+            <li>Can I substitute this exercise?</li>
+            <li>How often should I train glutes?</li>
+            <li>What should I do if I miss a workout?</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="num">Monthly Q&amp;A</div>
+          <h3>Go deeper.</h3>
+          <p>Use live Q&amp;A sessions for deeper questions, education, and additional guidance.</p>
+        </article>
+      </div>
+
+      <div class="statement">
+        Pro provides group-based resources, programming, and education.
+        <span class="supporting">It does not include unlimited private one-on-one coaching unless specifically stated.</span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <img class="footer-logo" src="destiny-fitness-logo.png" alt="" />
+      <div>Destiny Fit Club Pro</div>
+      <div>Train with direction. Build with consistency. Progress with confidence.</div>
+      <div style="margin-top:8px;">© 2026 Destiny Fitness. All rights reserved.</div>
+    </footer>
+
+  </main>
+</body>
+</html>
